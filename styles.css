@@ -1,31 +1,73 @@
+﻿body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 .container {
-position: relative;
-  text-align: center;
-  margin-top: 50px;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#image {
-  max-width: 100%;
-  max-height: 80vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.5s ease-in-out;
+.image-container {
+    margin-bottom: 20px;
+    position: relative;
 }
 
-#btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  border: none;
-  border-radius: 20px; /* Bo tròn các góc */
-  background-color: #b9d6f3; /* Màu nền */
-  color: #333;
-  cursor: pointer;
+img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+    display: block;
 }
 
-#btn:hover {
-  background-color: #8fb1d5; /* Màu nền khi hover */
-  color: #fff;
+.rounded-button {
+    position: absolute;
+    z-index: 1;
+    padding: 10px 20px;
+    background-color: #b9d6f3;
+    color: #a70049;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff8585; /* Màu hồng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.hidden {
+    display: none;
+}
+
+.overlay p {
+    color: white;
+    font-size: 24px;
+    opacity: 0; /* Ẩn chữ Hello ban đầu */
+    animation: fadeInText 2s forwards; /* Sử dụng animation để hiển thị từng kí tự một */
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
