@@ -17,13 +17,15 @@
 #btn {
   padding: 10px 20px;
   font-size: 16px;
-  border: 2px solid #333;
-  background-color: #fff;
+  border: none;
+  border-radius: 20px; /* Bo tròn các góc */
+  background-color: #b9d6f3; /* Màu nền */
   color: #333;
   cursor: pointer;
 }
 
 #btn:hover {
-  background-color: #333;
+  background-color: #8fb1d5; /* Màu nền khi hover */
   color: #fff;
 }
+
