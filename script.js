@@ -3,6 +3,6 @@ document.getElementById('btn').addEventListener('click', function() {
   image.style.opacity = '0';
   setTimeout(function() {
     image.style.display = 'none';
-  }, 500);
+  }, 200);
   document.body.style.backgroundColor = '#fff';
 });
