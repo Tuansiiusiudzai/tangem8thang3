@@ -1,8 +1,4 @@
 // JavaScript source code
-document.getElementById('btn').addEventListener('click', function() {
-  alert('Button clicked!');
-});
-
 document.getElementById('btn').addEventListener('click', function () {
     // Thêm ho?c xóa l?p 'white-background' khi nút ???c nh?p
     document.body.classList.toggle('white-background');
